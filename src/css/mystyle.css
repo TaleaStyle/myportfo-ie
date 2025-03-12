@@ -1,0 +1,1006 @@
+/* ==================== */
+/* 1. FONTS */
+/* ==================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+
+/* ==================== */
+/* 2. ROOT VARIABLES */
+/* ==================== */
+
+:root {
+    --fs-main: #050C0D;
+    --fs-second: #404040;
+    --fs-third: #A6A6A6;
+    --fs-fourth: #F2F2F2;
+    --fs-success: #198754;
+    --fs-danger: #dc3545;
+}
+
+/* ==================== */
+/*  GLOBAL STYLES */
+/* ==================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    color: var(--fs-main);
+}
+img{
+    max-width: 100%;
+}
+/* ==================== */
+/* 4. NAVBAR STYLING */
+/* ==================== */
+.main-container{
+    padding: 15px;
+ }
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 20px;
+background-color: white;     color:var(--fs-main);
+     border-bottom: 1px solid var(--fs-second);
+ }
+ 
+ /* Navbar Branding */
+ .cameraicon {
+     display: flex;
+     flex-direction: row;
+     align-items: center; /* Zentriert das Icon vertikal */
+ }
+ 
+ .navbar-brand {
+    
+     font-family: "Baskervville", serif;
+     margin-left: 10px;
+     font-size: 1.8rem;
+     font-weight: bold;
+ }
+ 
+ /* SVG Camera Icon */
+ .bi-camera2 {
+     width: 35px;
+     height: auto; /* Behält das Seitenverhältnis */
+ }
+ 
+ /* Navigation Links */
+ .navbar-links {
+     display: flex;
+     gap: 20px;
+ }
+
+ .navbar-links a:focus {
+    color: var(--fs-main);
+    font-weight: bold;
+}
+
+
+ .navbar-links a {
+color: var(--fs-second); 
+   text-decoration: none;
+     font-size: 1.1rem;
+     font-weight: 500;
+     text-transform: uppercase;
+ }
+ 
+ 
+ 
+ 
+ /* ==================== */
+ /* 6. HAMBURGER MENU */
+ /* ==================== */
+ 
+ .hamburger-menu {
+    color: var(--fs-second); 
+     font-size: 2rem;
+     cursor: pointer;
+     display: none; /* Standardmäßig versteckt, außer auf kleineren Bildschirmen */
+ }
+ 
+ .nav-toggle {
+     display: none;
+ }
+ 
+
+ /* ==================== */
+/* 8. HERO SECTION STYLES */
+/* ==================== */
+
+.hero {
+    background-image: url('../../assets/00-43.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--fs-fourth);
+    text-align: center;
+    padding: 100px 0;
+    width: 100%;
+    margin: 0;
+    align-items: flex-end; /* Text ganz unten */
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Text ganz unten */
+    height: 70vh; /* Höhe des Fensters */
+    
+
+    
+}
+
+.hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: flex-end;
+}
+
+.hero h1 {
+    /* font-family: Baskervville; */
+    font-size: 2.5rem;
+
+}
+
+.main-container {
+    padding: 15px;
+}
+
+/* ==================== */
+/* animation*/
+/* ==================== */
+
+.scroll-element {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 800ms ease-out; /* Einheitliche Transition */
+    margin: 2rem 0; /* Bessere Abstände */
+}
+.scroll-element h1{
+    font-size: 3.2rem;
+
+}
+.scroll-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ==================== */
+/*  CONTACT FORM STYLES */
+/* ==================== */
+
+
+
+.contact-form-section {
+    margin: 50px auto 0;
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    box-shadow: 0 2px 2px var(--fs-main);
+}
+
+.contact-form-section h2 {
+    color: var(--fs-second);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    text-align: start;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--fs-second);
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+    
+    width: 100%; /* Volle Breite */
+    padding: 10px; /* Innenabstand */
+    border: 0.5px solid var(--fs-third); /* Dünner Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1em; /* Einheitliche Schriftgröße */
+    box-sizing: border-box; /* Padding und Border in der Breite enthalten */
+    outline: none; /* Entfernt den Fokus-Rahmen des Browsers */
+}
+
+input:focus, textarea:focus {
+    border: 1px solid var(--fs-main); /* Fokus-Effekt */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical; /* Ermöglicht nur vertikales Resizing */
+}
+
+/* BUTTON STYLES */
+.contact-form button {
+    background-color: white; /* Hintergrundfarbe */
+    color: var(--fs-main); /* Textfarbe */
+    padding: 10px 20px; /* Innenabstand */
+    border: 0.5px solid var(--fs-second);
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1em; /* Schriftgröße */
+    cursor: pointer; /* Zeiger-Cursor */
+    width: 100%; /* Volle Breite */
+    transition: background-color 0.3s ease, transform 0.3s ease, padding-right 0.3s ease; /* Übergänge */
+}
+
+.contact-form button:hover {
+    font-size: 1.2em; /* Schriftgröße beim Hover vergrößern */
+    padding-right: 25px; /* Rechter Innenabstand beim Hover */
+}
+
+.contact-form button span {
+    cursor: pointer; /* Zeiger-Cursor für das `span`-Element */
+    display: inline-block; /* Inline-Block für Animationen */
+    position: relative; /* Für das `after`-Pseudoelement */
+    transition: padding-right 0.5s ease; /* Übergang für den Abstand */
+}
+
+.contact-form button span:after {
+    content: '\00bb'; /* » Symbol (Unicode) */
+    position: absolute; /* Absolut positioniert relativ zu `span` */
+    opacity: 0; /* Unsichtbar standardmäßig */
+    top: 0; 
+    right: -20px; 
+    transition: opacity 0.5s ease, right 0.5s ease; /* Übergänge für Sichtbarkeit und Position */
+}
+
+.contact-form button:hover span {
+    padding-right: 25px; /* Abstand beim Hover erhöhen */
+}
+
+.contact-form button:hover span:after {
+    opacity: 1; /* Sichtbar machen beim Hover */
+    right: 0; /* Position des Symbols anpassen */
+}
+
+.contact-form button:active {
+    transform: translateY(2px); /* Button leicht nach unten verschieben beim Klicken */
+}
+
+/* TERMS TEXT STYLE */
+.form-terms {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: var(--fs-second);
+}
+
+
+/* ==================== */
+/*  info-card-layout */
+/* ==================== */
+
+.info-card-layout {
+    color: var(--fs-second);
+    width: 100%;
+    max-width: 800px; /* Begrenzung der maximalen Breite */
+    margin: 0 auto; /* Zentriert den gesamten Abschnitt */
+    padding: 12px; /* Abstand innerhalb des Abschnitts */
+}
+
+.info-card-layout h2 {
+
+    margin-bottom: 30px;
+    font-size: 1.3 rem;
+color: var(--fs-main);
+ 
+}
+
+.card-box {
+    display: flex;
+    align-items:flex-start;
+    gap: 30px;
+
+}
+
+.home-img{
+    width: 100%;
+}
+.column-left img {
+    max-width: 70%; /* Bild passt sich an die Spaltenbreite an */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+}
+
+.column-right {
+    flex: 1.5; /* Nimmt den verbleibenden Platz ein */
+}
+
+
+.full-width-box {
+    width: 100%; /* Nimmt die gesamte Breite des Containers ein */
+    margin-top: 40px; /* Abstand nach oben (vom vorherigen Inhalt) */
+    text-align: start; /* Zentriert den Text im Box-Bereich */
+}
+.three-card-box{
+    display: flex;
+    flex-direction: row;
+}
+.three-img-box {
+    width: 100%;
+    max-width: 250px;
+
+    padding: 12px;
+    border-radius: 10px;
+    
+}
+video {
+    width: 100%; /* Video passt sich der Div-Breite an */
+    height: auto; /* Höhe wird automatisch angepasst */
+  }
+.column {
+    flex: 1; /* Beide Spalten sind gleich breit */
+    padding: 10px; /* Innenabstand */
+}
+
+.column-empty {
+    background-color: transparent; /* Sicherstellen, dass die Spalte sichtbar bleibt */
+}
+
+.column-text {
+    flex: 3; 
+    padding: 10px; /* Optionaler Abstand für den Text */
+}
+
+.column-left img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.right-img{
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+.column-right {
+    text-align: start;
+}
+
+.column-right h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-family: "Baskervville", serif;
+}
+
+.column-right p {
+    margin-bottom: 8px;
+}
+
+.column-right a {
+    color: var(--fs-second);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.column-right a:hover {
+    color: var(--fs-main);
+}
+
+
+
+/* ==================== */
+/*  FOOTER STYLES */
+/* ==================== */
+
+footer {
+    margin-top: 50px;
+    padding: 40px 20px;
+    background-color: var(--fs-main);
+    color: var(--fs-fourth);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav li {
+    margin: 0 15px;
+}
+
+.footer-nav a {
+    color: var(--fs-fourth);
+    text-decoration: none;
+}
+
+.footer-copyright {
+    font-size: 0.8em;
+    color: var(--fs-fourth);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--fs-fourth);
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+.back-to-top a {
+    font-size: 1.5em;
+    color: var(--fs-fourth);
+    text-decoration: none;
+}
+/* ==================== */
+/* 13. KALENDER STYLES */
+/* ==================== */
+
+.calendar {
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px var(--fs-second);
+}
+
+.calendar-header {
+    color: var(--fs-second);
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--fs-fourth);
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: var(--fs-second);
+}
+
+#calendar-body{
+    flex: 1;
+}
+#column-right-hinweiss {
+    flex: 1; /* Nimmt den verbleibenden Platz ein */
+}
+.calendar-header button:hover {
+    color: var(--fs-main);
+    font-size: 1.5em;
+}
+
+#month-year {
+font-family: "Baskervville", serif; 
+    font-size: 1.2em;
+    font-weight: bold;
+color: var(--fs-main);}
+
+.calendar-body {
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.calendar-weekdays,
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+}
+
+.calendar-weekdays div {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--fs-main);
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.calendar-dates div {
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--fs-second);
+}
+
+.calendar-dates div:hover {
+    background-color: var(--fs-third);
+}
+
+/* ==================== */
+/* 14. KALENDER DATUM STATUS */
+/* ==================== */
+
+
+
+.last-date {
+    color: var(--fs-third) !important;
+    font-weight: 300;
+    text-decoration: line-through;
+}
+
+.holiday-date {
+    font-family: "Raleway", serif;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+.available-date {
+    color: var(--fs-main) !important;
+}
+
+.unavailable-date {
+    color: var(--fs-third) !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.fully-booked {
+    color: var(--fs-fourth) !important;
+    font-weight: bold;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-radius: 5px;
+}
+
+.current-date {
+    color: var(--fs-main);
+    font-family: "Raleway", sans-serif;
+    font-size: 1.1rem;
+    border: 1px solid var(--fs-third);
+    font-weight: bold;
+}
+
+/* ==================== */
+/* 15. HERVORHEBUNG DES AUSGEWÄHLTEN DATUMS */
+/* ==================== */
+
+.selected {
+    background-color: var(--fs-second) !important;
+    color: white !important;
+    font-size: 1.2em;
+    font-family: "Raleway", serif;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 5px;
+}
+.selected:active{
+    transform: translateY(2px);
+}
+
+.selected-available-date {
+    background-color: var(--fs-third) !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* ==================== */
+/* 16. TERMIN BUCHUNG STYLES */
+/* ==================== */
+
+.alert-fullyBooked {
+    padding: 10px;
+    margin-top: 15px;
+    color: var(--fs-danger);
+    text-align: center;
+    font-weight: bold;
+}
+
+.termin-slot {
+    padding: 10px;
+    background: var(--fs-fourth);
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.termin-slot:hover {
+    background: var(--fs-second);
+    color: white;
+}
+
+.termin-slot.selected {
+    background: var(--fs-success);
+    color: white;
+    transform: translateY(2px);
+}
+
+
+.termin-slot.booked {
+    background: var(--fs-third);
+    color: white;
+    cursor: not-allowed;
+}
+
+/* ==================== */
+/* 17. FREIE TERMINE STYLES */
+/* ==================== */
+
+.freienTermine {
+    padding: 15px;
+    border: 1px solid var(--fs-fourth);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--fs-second);
+    font-size: 0.9em;
+}
+/* ==================== */
+/*  confirmation-container*/
+/* ==================== */
+
+.confirmation-container{
+  
+    padding: 40px 00px;
+    max-width: 400px;
+}
+
+.confirmation-container button {
+    background-color: white; /* Hintergrundfarbe */
+    color: var(--fs-main); /* Textfarbe */
+    padding: 10px 20px; /* Innenabstand */
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 0.5px solid var(--fs-second);
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1em; /* Schriftgröße */
+    cursor: pointer; /* Zeiger-Cursor */
+    width: 40%; /* Volle Breite */
+    transition: background-color 0.3s ease, transform 0.3s ease, padding-right 0.3s ease; /* Übergänge */
+}
+
+
+.confirmation-container button:hover {
+    font-size: 1.2em; /* Schriftgröße beim Hover vergrößern */
+    padding-right: 25px; /* Rechter Innenabstand beim Hover */
+}
+
+.confirmation-container button span {
+    cursor: pointer; /* Zeiger-Cursor für das `span`-Element */
+    display: inline-block; /* Inline-Block für Animationen */
+    position: relative; /* Für das `after`-Pseudoelement */
+    transition: padding-right 0.5s ease; /* Übergang für den Abstand */
+}
+
+.confirmation-container button span:after {
+    content: '\00bb'; /* » Symbol (Unicode) */
+    position: absolute; /* Absolut positioniert relativ zu `span` */
+    opacity: 0; /* Unsichtbar standardmäßig */
+    top: 0; 
+    right: -20px; 
+    transition: opacity 0.5s ease, right 0.5s ease; /* Übergänge für Sichtbarkeit und Position */
+}
+
+.confirmation-container button:hover span {
+    padding-right: 25px; /* Abstand beim Hover erhöhen */
+}
+
+.confirmation-container button:hover span:after {
+    opacity: 1; /* Sichtbar machen beim Hover */
+    right: 0; /* Position des Symbols anpassen */
+}
+
+.confirmation-container button:active {
+    transform: translateY(2px); /* Button leicht nach unten verschieben beim Klicken */
+}
+
+/* ==================== */
+/*  carousel_1*/
+/* ==================== */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px var(--fs-main); 
+ }
+
+
+  .carousel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+ 
+
+
+  .carousel img {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+ 
+
+  /* Pfeile */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--fs-second);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .carousel-button.left {
+    left: 10px;
+  }
+
+  .carousel-button.right {
+    right: 10px;
+  }
+
+  .carousel-button:hover {
+    font-size: 1.3rem;
+  }
+
+  /* Radio Buttons für Navigation */
+  input[type="radio"] {
+    display: none;
+  }
+
+  /* Positionierung der Bilder basierend auf Radio Buttons */
+  #slide1:checked ~ .carousel-track {
+    transform: translateX(0);
+  }
+  
+  #slide2:checked ~ .carousel-track {
+    transform: translateX(-100%);
+  }
+  
+  #slide3:checked ~ .carousel-track {
+    transform: translateX(-200%);
+  }
+  
+  #slide4:checked ~ .carousel-track {
+    transform: translateX(-300%);
+  }
+  
+  /* ==================== */
+/*  text-carousel */
+/* ==================== */
+
+  /* Hauptcontainer für das Carousel */
+  .text-carousel {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 2px 2px var(--fs-main);
+      padding: 0 60px; /* Platz für die Pfeile */
+  }
+
+  /* Track für die Slides */
+  .text-carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%; /* Stellt sicher, dass der Track die gesamte Breite einnimmt */
+
+  }
+
+  /* Einzelne Slides */
+  .text-carousel-div {
+      width: 100%;
+      flex-shrink: 0;
+      padding: 30px 60px; /* Abstand um den Text */
+      box-sizing: border-box; /* Padding bleibt innerhalb der Breite */
+      overflow-y: auto; /* Ermöglicht Scrollen bei langen Texten */
+  }
+
+  /* Pfeile */
+  .text-carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--fs-second);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      width: 40px; /* Breite der Pfeile */
+      height: 40px; /* Höhe der Pfeile */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .text-carousel-button.left {
+      left: -20px; /* Positionierung links außerhalb des Carousels */
+      margin-left: 20px;
+  }
+
+  .text-carousel-button.right {
+      right: -20px; /* Positionierung rechts außerhalb des Carousels */
+      margin-right: 20px;
+  }
+
+  .text-carousel-button:hover {
+font-size: large;  }
+
+  /* Radio Buttons für Navigation */
+  input[type="radio"] {
+       display: none; 
+  }
+
+  /* Positionierung der Bilder basierend auf Radio Buttons */
+  #text-slider1:checked ~ .text-carousel-track {
+      transform: translateX(0);
+  }
+
+  #text-slider2:checked ~ .text-carousel-track {
+      transform: translateX(-100%);
+  }
+
+  #text-slider3:checked ~ .text-carousel-track {
+      transform: translateX(-200%);
+  }
+
+  #text-slider4:checked ~ .text-carousel-track {
+      transform: translateX(-300%);
+  }
+
+  /* Responsives Design für kleinere Bildschirme */
+ 
+
+/* ==================== */
+/*  RESPONSIVE DESIGN */
+/* ==================== */
+
+@media screen and (max-width: 768px) {
+
+     /* Navbar für mobile Geräte */
+     .navbar {
+        flex-direction: column; /* Stapelt die Elemente untereinander */
+        align-items: flex-start; /* Richtet die Elemente am Anfang aus */
+    }
+
+    .cameraicon {
+        margin-bottom: 10px; /* Fügt etwas Abstand hinzu */
+    }
+
+    .navbar-links {
+        display: none; /* Versteckt die Links standardmäßig */
+        flex-direction: column; /* Stapelt die Links untereinander */
+margin-top: 35px;
+margin-bottom: 15px;
+      
+    }
+    .navbar-brand {
+ 
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    
+    .navbar-links.active {
+        display: flex; /* Zeigt die Links, wenn die Klasse 'active' hinzugefügt wird */
+    }
+    .navbar-links a  {
+        flex-basis: 25px;
+      
+      margin-left: 50px;
+        font-size: 1rem; 
+    }
+
+    .nav-toggle {
+        display: none; /* Checkbox verstecken */
+    }
+    .hamburger-menu {
+        display: block; /* Zeigt das Hamburger-Menü */
+        position: absolute; /* Positioniert es oben rechts */
+        top: 10px;
+        right: 10px;
+    }
+        /* Wenn der Hamburger-Button aktiviert ist, zeige die Navigation */
+        .nav-toggle:checked + .hamburger-menu + .navbar-links {
+            display: flex; /* Navigation sichtbar machen */
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+    
+     
+   
+    /* ======== contact-form ============ */
+    .form-row {
+        flex-direction: column;
+    }
+    .contact-form-section {
+        text-align: start;
+    }
+    .three-card-box{
+        
+        flex-direction: column;
+    }
+    /* ======== text-carousel ============ */
+    .text-carousel {
+        padding: 0 30px; /* Weniger Platz für die Pfeile auf kleinen Bildschirmen */
+        max-width: 100%; /* Passt sich der Bildschirmbreite an */
+        height: auto; /* Dynamische Höhe für kleine Geräte */
+    }
+
+    .text-carousel-div {
+        font-size: 0.9rem; /* Kleinere Schriftgröße für mobile Geräte */
+        padding: 15px; /* Weniger Padding auf kleinen Bildschirmen */
+        overflow-y: auto; /* Scrollen bei langen Texten bleibt aktiviert */
+    }
+
+    .text-carousel-button {
+        width: 30px; /* Kleinere Pfeile auf mobilen Geräten */
+        height: 30px;
+        padding: 5px;
+        font-size: 0.8rem; /* Kleinere Schriftgröße für Pfeile */
+    }
+    .card-box {
+        flex-direction: column;
+    }
+}
