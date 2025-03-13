@@ -37,6 +37,7 @@ body {
     font-family: "Raleway", sans-serif;
     margin: 0;
     color: var(--fs-main);
+     font-size: 18px;
 }
 img{
     max-width: 100%;
